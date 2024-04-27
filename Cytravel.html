@@ -55,48 +55,55 @@
 
         <!-- set background image -->
 
-        <div class="profile-card"
-            style="height:500px; margin:  0 !important; box-shadow: none !important; background-image:url('cytonn-display.jpeg') !important; background-size: cover;">
+        <div class="profile-card" id="navbar">
 
-            <div class="top-bar" style="background-color: transparent; ">
-                <ul class="left" style="list-style-type: none; background-color: transparent;">
+            <div  id="navbar-links">
+                <ul style="background-color: transparent;">
                     <!-- <li><a href="#">Cytonn<span>.</span></a></li> -->
                     
                     <img src="cytonn-investment.png" alt="" width="100" height="90">
                 </ul>
-                <ul class="right" style="list-style-type: none; display: flex;  justify-content:space-between; background-color: transparent;  ">
-                    <li style="margin-right: 20px; "><a href="#">Services</a></li>
-                    <li style="margin-right: 20px;"><a href="#Skills">Products</a></li>
-                    <li style="margin-right: 20px;"><a href="#projects">The Firm</a></li>
-                    <li style="margin-right: 20px;"><a href="#contact">Our Blog</a></li>
-                    <li style="margin-right: 80px;"><a href="#contact">Contact Us</a></li>
-
-                    <li style="margin-right: 20px;"><a href="#contact"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-
+                <ul    id="navbar-links-url">
+                    <li ><a href="#">Home</a></li>
+                    <li ><a href="#Skills">About Us</a></li>
+                    <li ><a href="#projects">Destination</a></li>
+                    <li ><a href="#contact">When  to travel</a></li>
+                    <li ><a href="#contact">Packages</a></li>
+                    <li><a href="">Contact us</a></li>
                 </ul>
+                <ul style="padding-right: 35px;">
+                    <!-- <li><a href="#">Cytonn<span>.</span></a></li> -->
+                    <button type="submit" style=" ">Plan My Trip</button>
+                </ul>
+
             </div>
             <!-- <button class="menu-icon" type="button" data-toggle></button> </div> -->
         
-            <div class="profile-info">
-                <h2 style=" font-family: Oswald; font-size: 70px; padding-left: 80px; padding-top: 90px; color: white;"
-                    class="text-left"> Design. <span style="color: rgb(7, 152, 45);">|</span></h2>
-                <hr style="margin-left: 80px; margin-right: 80px; margin-top: 2px;">
-                <p style=" font-size: medium; padding-left: 80px; color:#bfbdbd" class="text-left">We design Solutions for
-                    digital interactions.<br>
-                    With its approach our ,team generates extraordinary value for brands through innovative design.
-                </p>
-
-                <!-- Look for a symbol that looks downwards:replace it . -->
-                <!-- <p class="text-center " style="color:white; padding-top: 90px;">^</p> -->
-                <p class="text-center">
-                    <i class="fa-solid fa-circle-chevron-down" style="padding-top: 70px; color: white;" ></i>
-
-                </p>
-
-
-
-
-
+            <div class="profile-info"  id="profile-info-header">
+                <div>
+                
+                    <h2> Design your Dream Trip</h2>
+                    <div id="categoryCard">
+                        <button>Honeymoon</button>
+                        <button>Group Trips</button>
+                        <button>Destination Wedding</button>
+                        <button>Solo Adventure</button>
+                    </div>
+                
+                    <div id="categoryCard"
+                        style=" padding-right: 30px; padding-top: 10px; padding-bottom: 80px;">
+                
+                        <button>Couple's Escape</button>
+                        <button>Family Holiday</button>
+                        <button>All Trips</button>
+                    </div>
+                    <div id="toggle-icons">
+                            <i class="fa-solid fa-circle-chevron-down" style=" color: white;"></i>
+                            <i class="fa-solid fa-circle-chevron-down" style=" color: white;"></i>
+                            <i class="fa-solid fa-circle-chevron-down" style=" color: white;"></i>
+                            <i class="fa-solid fa-circle-chevron-down" style=" color: white;"></i>
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -5,10 +5,6 @@ body {
     background-color: white;
     width: fit-content;
     height: 100vh;
-
-    
-       
-    
       
 }
 
@@ -22,6 +18,83 @@ body {
   justify-content: flex-end;
   padding-left: 10px; 
 }
+
+#categoryCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#categoryCard button {
+    color:white;
+    border: 1px solid white;
+    padding: 12px 15px;
+    border-radius: 23px;
+    background-color: transparent;
+}
+#toggle-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#profile-info-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:30px;
+    padding-left: 15px;
+
+}
+#profile-info-header h2 {
+    font-family: Oswald;
+    font-size: 70px;
+    padding-top: 90px;
+    color: white;
+}
+
+#navbar{
+    height: 500px;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background-image:url('cytonn-display.jpeg') !important; 
+    background-size: cover;
+}
+#navbar-links{
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; 
+     padding-top: 40px; 
+}
+#navbar-links-url {
+    display: flex;
+      gap: 20px;   
+      justify-content:space-between;
+      background-color: transparent; 
+      color: #FFF !important;
+}
+#navbar-links ul {
+    list-style-type:none;
+}
+#navbar-links button{
+    color: white;
+     border: 1px solid orange; 
+     padding: 10px 25px; 
+     border-radius: 25px;
+      background-color: orange;
+
+
+}
+@media(max-width:797px){
+    #navbar-links button{
+        padding: 20px 25px;
+        font-size: small;
+    }
+}
+
+
+
 
 
 /*id selector*/
