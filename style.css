@@ -164,6 +164,169 @@ body {
     box-sizing: border-box;
   }
   
+  .mainFooter{
+    background-color: rgb(11,92,80);
+  }
+  .downLogo{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  #bottomLogo{
+    height: 130px;
+  }
+  .bottom-line{
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+  }
+  #footer-part{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+  #address-part{
+    padding-left: 100px;
+  }
+  #address{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #address-part{
+    padding-left: 100px;
+  }
+  #add-details{
+    color: white;
+    font-size: 14px;
+  }
+  #address1{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  #for-padding{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+  #newsletter{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #newsletter-text{
+    color: white;
+    font-size: 14px;
+  }
+
+  #newsletter-text{
+  color: white;
+  font-size: 14px;
+}
+#email-part{
+    background-color: rgb(16,82, 73);
+    max-height: 50px;
+    border-radius: 25px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #email-part1{
+    background-color: rgb(16,82, 73);
+    max-height: 40px;
+    border: none;
+    width: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: white;
+    
+  }
+  #email-part1::placeholder{
+    color: white;
+  }
+  #email-part1:focus{
+    border: none;
+  }
+  #submit-but{
+    background-color: rgb(247, 173, 64);
+    border-radius: 25px;
+    width: 120px;
+    margin: 5px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+  }
+  #social-part{
+    padding-right: 100px;
+  }
+  #social{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #icons-used{
+    display: flex;
+    gap: 1px;
+  }
+  #icon1{
+    color: white;
+    
+  }
+  .fa-brands{
+    margin-right: 4px;
+  }
+  
+  .icon-div{
+    margin: 3px;
+    border: 1px solid white;
+    border-radius: 30px;
+    align-items: center;
+    padding:2px;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  .we-accept{
+    padding-top: 30px;
+  }
+  #logos-used{
+    display: flex;
+    justify-content: space-between;
+  }
+  #iimg{
+    padding: 3px;
+    padding-left: 10px;
+  }
+  #final-content{
+    background-color: rgb(9,55,48);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #down-contents{
+    color: white;
+    padding-left: 100px;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    gap: 25px;
+    
+  }
+  #copyright{
+    color: rgb(189,203,201);
+    font-size: 12px;
+    padding-right: 100px;
+  }
+  #padding-set{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+ 
   
   
   

@@ -282,7 +282,7 @@
 
        
 
-        <section id="customer-says" style="background-image:url('cytonn-display.jpeg') ; background-size: cover;">
+        <section id="customer-says" style="background-image:url('cytonn-display.jpeg') ; background-size: cover; position: relative;">
 
                
                 <div class="customer-card" style=" background-color: transparent; ">
@@ -291,23 +291,50 @@
                         <h4 style="font-weight:bold;">THE ANTILOPHIA EXPERIENCE</h4>
 
 
-                        <div style="border:1px solid gray ; background-color:red; max-width:350px;border-radius: 5px;">
-                            <div style="border:1px solid gray ; background-color:gray;  max-width:250px;border-radius: 5px; padding-left: 10px; padding-right: 10px;">
-                                <div style="display:flex;justify-content:left; gap:5px;">
-                                    <img src="cytonn-display.jpeg" width="50" height="20" alt="">
+                        <div
+                            style="border:1px solid gray ; background-color:red; max-width:350px;border-radius: 5px; position: relative; display: flex;align-items: center; overflow: visible; height: 250px; margin-bottom: 30px;">
+                        
+                            <button class="chevron-left"><i class="fa-solid fa-chevron-left"></i></button>
+                        
+                            <div
+                                style="border:1px solid gray ; background-color:gray;border-radius: 5px; position: relative; width: 550px; margin-top: 5px; overflow: visible; padding-top: 20px;padding-left: 20px;   ">
+                        
+                                <div style="display:flex;justify-content:left; gap:5px; margin-top: 10px;">
+                                    <img src="cytonn-display.jpeg" style="border-radius:10px; margin-left:20px; margin-right:8px ; " width="50"
+                                        height="50" alt="">
                                     <div>
                                         <h4>Amanda Doe</h4>
-                                        <p> <i class="fa-solid fa-circle-chevron-down" style=" color:white;"></i></p>
+                                        <div style="margin-top:-13px; display:flex; justify-content:left;gap:2px; ">
+                                            <i style=" font-size:8px;color: yellow;" class="fa-solid fa-star "></i>
+                                            <i style="font-size:8px;color: yellow;" class="fa-solid fa-star"></i>
+                                            <i style="font-size:8px;color: yellow;" class="fa-solid fa-star"></i>
+                                            <i style="font-size:8px;color: yellow;" class="fa-solid fa-star"></i>
+                                            <i style="font-size:8px;" class="fa-solid fa-star"></i>
+                        
+                        
+                                        </div>
+                        
                                     </div>
-
+                        
                                 </div>
-                                Booked a vacation through your company in Cyprus at the end of  April 
+                                <div style=" margin-left:20px; text-align: left; padding-bottom: 20px;">
+                        
+                                    Booked a vacation through your company in Cyprus at the end of April
+                                    Booked a vacation through your company in Cyprus at the end of April
+                                    Booked a vacation through your company in Cyprus at the end of April
+                                </div>
 
+                                <i class="fa-solid fa-ellipsis"></i>
+                        
+                        
                             </div>
-
+                            <button class="chevron-left"><i class="fa-solid fa-chevron-right"></i></button>
+                        
                         </div>
-                        <p class="text-center" style="color: #9c9898;  font-size: 30px;"><i class="fa-solid fa-ellipsis"></i></p>
-                
+
+
+                        
+                           
                     </div>
                 </div>
 
@@ -423,75 +450,100 @@
         <!-- customer-says -->
        
 
-        <!-- contact  -->
-        <section id="contact">
-
-            <div class="card-container">
-
-                <div class="contact-card">
-                    <div class="contact-info">
-
-
-                        <p style="padding-left: 90px;padding-top: 20px;"><b>Ready to</b> <i>create something
-                                Stunning</i>
-                            <b>with us ?</b></p>
-
-                        <button class="  button" >Contact us</button>
-                        
+        <section class="mainFooter">
+            <div class="downLogo">
+              <img id="bottomLogo" src="img/logo2.png" alt="logo">
+            </div>
+            <div class="bottom-line">
+              <hr>
+            </div>
+          
+            <div class="flex-container" id="footer-part">
+          
+              <div id="address-part">
+          
+                <div id="address"><p>ADDRESS <br></p></div>
+                <div id="add-details">
+                  <p>P.O Box 20695 - 00200, <br> Nairobi, Kenya</p>
+                </div>
+          
+                <div id="address1">TELEPHONE</div>
+                <div id="add-details">Phone +254(0)712 101 222</div>
+          
+              </div>
+          
+              <div id="newsletter-part">
+                <div id="for-padding">
+                  <div id="newsletter"><p>NEWSLETTER</p></div>
+                <div id="newsletter-text">Sign in below to receive CyTravel newsletter <br>and occassional updates from our Journal </div>
+          
+                </div>
+                
+                <div id="email-part" class="flex-container">
+                    <div id="ent-email">
+                      <input type="text" placeholder="Your Email" id="email-part1">
+                    </div>
+                    <div id="submit-but1">
+                      <button id="submit-but">SUBMIT</button>
                     </div>
                 </div>
+              </div>
+          
+              <div id="social-part">
+                <div id="social"><p style="padding-right: 40px;">SOCIAL</p>
+                <div id="icons-used" class="flex-container">
+                  <div class="icon-div"><i id="icon1" class="fa-brands fa-facebook-f"></i></div>
+                  <div class="icon-div"><i id="icon1-" class="fa-brands fa-twitter" style="font-size: 10px;"></i></div>
+                  <div class="icon-div"> <i id="icon1" class="fa-brands fa-instagram"></i></div>
+                  <div class="icon-div">  <i id="icon1" class="fa-brands fa-linkedin"></i></div>
+                
+                </div>
+          
+                <div class="we-accept">
+                  <div id="accept"> <P>WE ACCEPT</P> </div>
+                  <div class="flex-container" id="logos-used">
+          
+                    <div id="iimg"><img src="img/mpesa_white.png" alt="mpesa logo"></div>
+                    <div id="iimg"><img src="img/visa_white.png" alt="visa logo"></div>
+                    <div id="iimg"><img src="img/mastercard_white.png" alt="mastercard"></div>
+          
+                  </div>
+          
+          
+                </div>
+          
+              </div>
+              </div>
+          
+          
+              
+          
+             
+          
             </div>
-
-        </section>
+          
+          </section>
+          <section class="final-part">
+          <div id="final-content" class="flex-container">
+            <div id="down-contents" class="flex-container">
+          
+              <div><p>ABOUT US</p></div>
+              <div><P>ALL TRIPS</P></div>
+              <div><P>DESTINATIONS</P></div>
+              <div><P>CONTACT US</P></div>
+          
+            </div>
+            <div id="copyright">
+          
+              <p> <i class="fa-regular fa-copyright"></i> 2023 CyTravel. All rights reserved.</p>
+            </div>
+          
+          </div>
+          
+          </section>
 
         <!-- footer -->
-        <section id="footer" style="background-image: url('image-dark.jpeg');">
-            <h5 style="color: #9c9898; padding-top: 20px; padding-left: 90px; padding-bottom: 0; font-weight: bold; ">
-                NEVER MISS UPDATES</h5>
-
-
-            <div class="card-container">
-                <div class="card-footer" style="padding-top:0 !important;padding-left: 0;">
-                    <div class="footer-info">
-                        <p class=" text-left" style="padding-left: 90px;">Want to be notified when we launch a new
-                            template or
-                            an <br>
-                            update .just sign up and
-                            we will send you a notification by <br> email.
-                        </p>
-                    </div>
-                </div>
-                <div style="margin-left:50px"></div>
-                <div class="card-footer">
-                    <div class="footer-info">
-                        <!-- will use forms normally in a real world implementation -->
-                        <!-- <form action=""> -->
-                        <!-- <input type="email" placeholder="Email address*" style="border: none; border-bottom: 1px solid black;" > -->
-                        <p> Email Address*</p>
-                        <hr style=" margin-right: 100px; border-color: #9c9898;">
-                        <button class=" success button"
-                            style="border-radius: 29px;color: white;font-weight: bold; padding-left: 27px; padding-right: 27px;">SignUp</button>
-                        <!-- </form> -->
-                        <p>*No Spamming here</p>
-
-                    </div>
-                </div>
-                <!-- <hr> -->
-
-
-            </div>
-            <div style="color: white;">
-                <p style=" margin-left: 100px;color:#9c9898"> <i class="fa-brands fa-facebook-f" style="padding-right: 7px;"></i>  <i class="fa-brands fa-twitter" style="padding-right: 7px;"></i> <i class="fa-brands fa-instagram" style="padding-right: 7px;"></i> <i class="fa-solid fa-basketball"></i></p>
-                <hr style=" border-color: #9c9898; margin-right: 100px; margin-left: 100px;">
-
-                <p style=" margin-bottom: 80px; margin-left: 100px; color: #9c9898;"><i class="fa-regular fa-copyright" style="padding-right: 2px;"></i>CytonnTechnologies.All Rights
-                    Reserved.Terms And Condition |Cookie policy</p>
-                <hr style="border-color: black;">
-
-            </div>
-
-
-        </section>
+       
 
 
     </div>
