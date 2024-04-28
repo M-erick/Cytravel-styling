@@ -65,17 +65,18 @@ body {
      padding-top: 0px;
 } 
 #navbar{
-    height: 500px;
+    height: 400px;
     margin: 0 !important;
     box-shadow: none !important;
-    background-image:url('cytonn-display.jpeg') !important; 
+    background-image:url('img/display101.jpg') !important; 
     background-size: cover;
 }
 #navbar-links{
     display: flex;
     justify-content: space-between; 
     gap: 15px; 
-     padding-top: 40px; 
+    min-width: 250px;
+     padding-top: 20px; 
 }
 #navbar-links-url {
     display: flex;
@@ -89,10 +90,10 @@ body {
 }
 #navbar-links button{
     color: white;
-     border: 1px solid orange; 
+     border: 1px solid rgba(249,147,0,255); 
      padding: 10px 25px; 
      border-radius: 25px;
-      background-color: orange;
+      background-color: rgba(249,147,0,255);
 
 
 }
@@ -114,6 +115,61 @@ body {
     border-radius: 35px;
 
 }
+.image-container{
+
+    display: flex;
+    flex-wrap:nowrap;
+    overflow: hidden;
+    padding-top: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative; /* Make image container relative for button positioning */
+
+   
+}
+
+  
+  .image-carousel2 {
+    display: flex; 
+    justify-content: center;
+    min-width: 600px;
+  }
+  
+  .image-wrapper2 { 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-size: cover;  /* Maintain image scaling */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-end; /* Align content at the bottom */
+    align-items: center;
+}
+  
+
+  
+  .chevron-left2,
+  .chevron-right2 {
+    position: absolute; 
+    background-color: rgb(230, 219, 219);
+    opacity: 0.9;
+    border-radius: 50%;
+    padding: 13px 15px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1; 
+  }
+  
+  .chevron-left2 {
+    left: 0; 
+    margin-left: 80px;
+  }
+  
+  .chevron-right2 {
+    right: 0; 
+    margin-right: 50px;
+
+  }
+  
 .image-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -137,7 +193,7 @@ body {
     top: 0;
     right: 0;
     color: white; 
-    background-color: black; 
+    background-color:rgb(8,108,92); 
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 0 5px 0 8px;  }
