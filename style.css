@@ -85,6 +85,22 @@ body {
       background-color: transparent; 
       color: #FFF !important;
 }
+#navbar-links-url a {
+    text-decoration:none;
+     color:white;   
+     padding-bottom: 2px;
+     position: relative;
+
+}
+
+  
+  #navbar-links-url a:hover {
+    color:orange; 
+    text-decoration: underline; 
+  }
+  
+
+
 #navbar-links ul {
     list-style-type:none;
 }
@@ -202,25 +218,83 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 60px;
     bottom: 10px;
     left: 10px;
     color: white; 
-    padding-left: 5px;
   }
   .rotate-arrow {
     transform: rotate(320deg); 
     display: inline-block; 
     background-color: gray;
+    opacity: 0.8;
     border-radius: 50%;
-    padding: 10px;
+    padding:5px 10px;
     text-align: center;
     width: fit-content;
     height: fit-content;
     box-sizing: border-box;
   }
   
-  
+  #testimonial-outer-card {
+    margin-top:35px;
+    border:1px solid rgba(87,81,80,255) ;
+    background-color:rgba(87,81,80,255); 
+    opacity: 0.85;
+    border-radius: 90px;
+     position: relative;
+     display: flex;
+     align-items: center; 
+     overflow: visible;
+      height: 240px; 
+     margin-bottom: 50px;
+
+  }
+  #testimonial-inner-card{
+    display:flex;
+    justify-content:space-between ;
+    gap: 5px;
+     border:1px solid rgba(101,95,96,255); 
+     background-color:rgba(101,95,96,255);
+     opacity: 0.9;
+     border-radius: 55px;
+     position: relative;
+      width: 550px;
+      margin-top: -2px; 
+       overflow: visible;
+       padding-top: 20px;
+       padding-left: 20px; 
+  }
+  #testimonial-inner-card button {
+    margin-left:-25px ;
+  }
+  #testimonial-info {
+    display:flex;
+    justify-content:left;
+    gap:5px;
+    margin-top: 10px;
+
+  }
+  #testimonial-info img {
+    border-radius:10px; 
+    margin-left:20px;
+    margin-right:8px ;
+
+  }
+  #testimonial-info-message {
+    margin-left:20px;
+    text-align: left; 
+    padding-bottom: 30px;
+    padding-top:5px ;
+
+  }
+  #testimonial-info-rating {
+    margin-top:-13px;
+     display:flex; 
+     justify-content:left;
+     gap:2px;
+
+  }
   .mainFooter{
     background-color: rgb(11,92,80);
   }
@@ -475,7 +549,6 @@ body {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
     justify-content: center;
 }
 .profile-card {
