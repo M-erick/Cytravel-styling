@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 #categoryCard button {
     color:white;
@@ -109,6 +109,7 @@ body {
      border: 1px solid rgba(249,147,0,255); 
      padding: 10px 25px; 
      border-radius: 25px;
+     font-weight: bold;
       background-color: rgba(249,147,0,255);
 
 
@@ -121,7 +122,7 @@ body {
     padding-top: 15px;
 }
 #booking-contact p {
-    line-height: 0.5;
+    /* line-height: 0.5; */
 
 }
 #booking-contact button {
@@ -226,10 +227,11 @@ body {
   .rotate-arrow {
     transform: rotate(320deg); 
     display: inline-block; 
-    background-color: gray;
-    opacity: 0.8;
+    background-color: rgb(230, 219, 219);
+    opacity: 0.9;
     border-radius: 50%;
     padding:5px 10px;
+    
     text-align: center;
     width: fit-content;
     height: fit-content;
@@ -457,14 +459,28 @@ body {
     padding-left: 30px;
     padding-right: 30px;
   }
- 
   
+  #topImage{
+    border-radius:50%;
+     margin-right:-20px ;
+     bottom:0; 
+     left:0;
+     position:relative;
+      background-size: cover; 
+    width: 20%;
+  }
   
   
 
-@media(max-width:797px){
+@media screen and(max-width:900px){
     #navbar-links-url {
         gap: 9px;
+    }
+    #displaytopImage{
+        margin-left: -10px; 
+      }
+    #topImage{
+        margin-right: 0px;
     }
     #navbar-links button{
         padding: 20px 25px;
@@ -478,13 +494,13 @@ body {
         border-radius: 25px;
     }
     #booking-contact p {
-        line-height: 1.5;
+        margin: auto;
     }
     #booking-info p {
         line-height: 0;
     }
 }
-@media screen and (max-width: 768px) { /* Target screens smaller than 768px */
+@media screen and (max-width: 900px) { /* Target screens smaller than 768px */
   
   .image-carousel{
     height: 100%;
