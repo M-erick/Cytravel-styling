@@ -28,3 +28,29 @@ leftButton.addEventListener('click', () => {
     leftButton.disabled = true;
   }
 });
+
+const toggleIcons = document.getElementById('toggle-icons');
+  const navbar = document.getElementById('navbar');
+  const imagePaths = [
+   'img/malindi2.png',
+   'img/display104.jpg',
+   'img/display105.jpg' ,
+   ' img/display102.jpg',
+  ];
+
+
+
+  toggleIcons.addEventListener('click', (event) => {
+    if (event.target.classList.contains('fa-solid') || event.target.classList.contains('fa-regular')) {
+      const clickedIndex = Array.from(toggleIcons.children).indexOf(event.target);
+
+      // Check for valid index within imagePaths array
+      if (clickedIndex >= 0 && clickedIndex < imagePaths.length) {
+        navbar.style.backgroundImage = `url(${imagePaths[clickedIndex]})`;
+      } else {
+        console.error("Invalid icon click index"); // Optional: Handle unexpected clicks
+      }
+    }
+  });
+
+  
