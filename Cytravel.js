@@ -72,6 +72,63 @@ const toggleIcons = document.getElementById('toggle-icons');
   rightButton2.addEventListener('click', () => moveCarousel(1));
   
 
+  const testimonials = [
+    {
+      image: "img/person105.jpeg",
+      name: "Lynette",
+      rating: [true, true, true, true, true], 
+      message: "I had a wonderful experience booking my recent trip to Hawaii through your company. The process was smooth and efficient, and your customer service representatives were very helpful. The resort you recommended was perfect for our needs."
+    },
+    {
+      image: "img/person106.jpeg",
+      name: "Agnes",
+      rating: [true, true, true, true, false], 
+      message: "Booked a vacation through your company in Cyprus at the end of April. The hotel is decent, the quality of food is good, the area is large, so even the pool is there. Azure water and white velvet sand will not leave anyone indifferent."
+    },
+    {
+      image: "img/person107.jpeg",
+      name: "Mark",
+      rating: [true, true, true, false, false], 
+      message: "Booked a vacation through your company in Hawaii at the end of April. The hotel is decent, the quality of food is good, the area is large, so even the pool is there. Azure water and white velvet sand will not leave anyone indifferent."
+    },
+    {
+      image: "img/person108.jpeg",
+      name: "Taylor",
+      rating: [true, true, true, false, false], 
+      message: "Booked a vacation through your company in Cyprus at the end of April. The hotel is decent, the quality of food is good, the area is large, so even the pool is there. Azure water and white velvet sand will not leave anyone indifferent."
+    },
+  ];
+  const toggleMessageDetails = document.querySelector('.toggleInfo');
+  const testimonialInfo = document.getElementById('testimonial-info');
+  const testimonialMessage = document.getElementById('testimonial-info-message');
+  const chevronLeft = document.getElementById('chevronLeft');
+  const chevronRight = document.getElementById('chevronRight');
 
+  let currentContentIndex = 0;
+  function updateContent() {
+    const currentTestimonial = testimonials[currentContentIndex];
+  
+    // Update testimonial-info
+    testimonialInfo.innerHTML = `
+      <img src="${currentTestimonial.image}" width="40" height="50" alt="">
+      <div>
+        <h4>${currentTestimonial.name}</h4>
+        <div id="testimonial-info-rating">
+          ${currentTestimonial.rating.map(star => star ? '<i class="fa-solid fa-star" style="font-size:8px;color: rgba(249,174,48,255);"></i>' : '<i class="fa-solid fa-star" style="font-size:8px;"></i>').join('')}
+        </div>
+      </div>
+    `;
+  
+    // Update testimonial-info-message
+    testimonialMessage.textContent = currentTestimonial.message;
+  }
+  function toggleContent() {
+    currentContentIndex = (currentContentIndex + 1) % testimonials.length;
+    updateContent();
+  }
+  
+  toggleMessageDetails .addEventListener('click', toggleContent); 
+  chevronLeft.addEventListener('click',toggleContent);
+  chevronRight.addEventListener('click',toggleContent);  
 
   
