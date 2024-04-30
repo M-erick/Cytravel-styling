@@ -52,5 +52,26 @@ const toggleIcons = document.getElementById('toggle-icons');
       }
     }
   });
+  const imageCarousel = document.querySelector('.image-carousel2');
+  const currentImageIndex2 = 0; // Keeps track of the currently displayed image
+  
+  const moveCarousel = (direction) => {
+    const imageCount = imageCarousel.children.length;
+    const imageWidth = imageCarousel.children[0].offsetWidth; // Get width of first image
+  
+    const newIndex = (currentImageIndex2 + imageCount + direction) % imageCount;
+  
+    imageCarousel.style.transform = `translateX(-${newIndex * imageWidth}px)`;
+    currentImageIndex2 = newIndex;
+  };
+  
+  const leftButton2 = document.querySelector('.chevron-left2');
+  leftButton2.addEventListener('click', () => moveCarousel(-1));
+  
+  const rightButton2 = document.querySelector('.chevron-right2');
+  rightButton2.addEventListener('click', () => moveCarousel(1));
+  
+
+
 
   
