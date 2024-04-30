@@ -69,7 +69,7 @@ body {
     height: 400px;
     margin: 0 !important;
     box-shadow: none !important;
-    background-image:url('img/display101.jpg') !important; 
+    background-image:url('img/display101.jpg'); 
     background-size: cover;
 }
 #navbar-links{
@@ -107,11 +107,11 @@ body {
 }
 #navbar-links button{
     color: white;
-     border: 1px solid rgba(249,147,0,255); 
+     border: 1px solid rgba(249,174,48,255); 
      padding: 10px 25px; 
      border-radius: 25px;
      font-weight: bold;
-      background-color: rgba(249,147,0,255);
+      background-color: rgba(249,174,48,255);
 
 
 }
@@ -463,13 +463,14 @@ body {
   
   #topImage{
     border-radius:50%;
-     margin-right:-20px ;
-     bottom:0; 
-     left:0;
+     margin-right:-30px ;
+     background-color: rgb(242, 246, 246);
+     opacity: 0.5;
      position:relative;
       background-size: cover; 
     width: 20%;
   }
+  
   
   
 
