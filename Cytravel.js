@@ -2,32 +2,116 @@ const carousel = document.querySelector('.image-carousel');
 const images = document.querySelectorAll('.image-carousel img');
 const leftButton = document.querySelector('.chevron-left');
 const rightButton = document.querySelector('.chevron-right');
+const imageContainers = carousel.querySelectorAll('.image-with-text');
 
-let currentImageIndex = 0;
+
+
+
+// data to carousel
+const carouselData = [
+  {
+    id:1,
+    image: "img/masaai2.png",
+    title: "7 Days ",
+    description: "Explore the vast plains of Africa.",
+    price: "FROM $820",
+    info:" (per person sharing)",
+    stars: [true, true, true, true, true], 
+  },
+  {
+    id:2,
+    image: "img/masaai2.png", 
+    title: "6 Days ",
+    description: "Experience the thrill of safari journey.",
+    price: "FROM $1200 ",
+    info:" (per person sharing)",
+    stars: [true, true, true, true, false],
+  },
+  {
+    id:3,
+    image: "img/masaai2.png", 
+    title: "6 Days ",
+    description: "Experience the thrill of safari journey.",
+    price: "FROM $1240 ",
+    info:" (per person sharing)",
+    stars: [true, true, true, true, false],
+  },
+  {
+    id:4,
+    image: "img/masaai2.png", 
+    title: "9 Days ",
+    description: "Experience the thrill of safari journey.",
+    price: "FROM $1540 ",
+    info:" (per person sharing)",
+    stars: [true, true, true, true, false],
+  },
+  
+];
+let displayedData = []; 
+
+
+
+function updateCarousel(data) {
+  const imageContainer = document.createElement('div');
+  imageContainer.classList.add('image-with-text');
+
+    imageContainer.innerHTML = `
+    <img src="${data.image}" alt="Image" width="350"style="border-radius:5px;">
+    <p class="text-top-right">${data.title}</p>
+    <div class="text-bottom-left">
+      <div style="padding-bottom:20px ;">
+        <p>${data.description }  </p>
+        <p style="margin-top:-18px; "> 
+          <span style="font-weight:bold ;">${data.price}</span> <span style="font-size:small ;">${data.info}</span>
+        </p>
+        <div style="margin-top:-13px; display:flex; justify-content:left;gap:2px; ">
+          ${data.stars.map(star=>star ? '<i class="fa-solid fa-star" style="font-size:8px;color: rgba(253,211,5,255);"></i>':'<i class="fa-solid fa-star" style="font-size:8px;"></i>').join('')}
+        </div>
+      </div>
+      <p class="rotate-arrow">
+      <i class="fa-solid fa-arrow-right" style="color: white"></i></p>
+    </div>
+  `;
+
+
+  carousel.appendChild(imageContainer);
+  carousel.insertBefore(imageContainer,carousel.firstChild);
+
+  displayedData.push(data); 
+}
+leftButton.addEventListener('click', () => {
+  if (displayedData.length > 1) {
+    const dataIndexToRemove = displayedData.length - 1; 
+    const leftData = carouselData[dataIndexToRemove - 1]; 
+
+    carousel.lastChild.remove();
+
+    displayedData.splice(dataIndexToRemove, 1); 
+    const nextData = carouselData.find(item => !displayedData.some(displayedItem => displayedItem.id === item.id));
+  if (nextData) {
+    updateCarousel(leftData);
+    displayedData.unshift(leftData); 
+  }
+  }
+  leftButton.disabled = displayedData.length === carouselData.length;
+
+  // Left button always clickable
+});
 
 rightButton.addEventListener('click', () => {
-  currentImageIndex++;
-  if (currentImageIndex >= images.length) {
-    currentImageIndex = 0;
+  if (displayedData.length < carouselData.length) {
+    const dataIndex = carouselData.indexOf(displayedData[displayedData.length - 1]);
+    const rightData = carouselData[dataIndex + 1];
+    const nextData = carouselData.find(item => !displayedData.some(displayedItem => displayedItem.id === item.id));
+  if (nextData) { 
+    updateCarousel(rightData);
+    displayedData.push(rightData); 
   }
-  carousel.style.transform = `translateX(-${currentImageIndex * 100}%)`;
-  leftButton.disabled = false;
-  if (currentImageIndex === images.length - 1) {
-    rightButton.disabled = true;
   }
+  rightButton.disabled = displayedData.length === carouselData.length;
 });
 
-leftButton.addEventListener('click', () => {
-  currentImageIndex--;
-  if (currentImageIndex < 0) {
-    currentImageIndex = images.length - 1;
-  }
-  carousel.style.transform = `translateX(-${currentImageIndex * 100}%)`;
-  rightButton.disabled = false;
-  if (currentImageIndex === 0) {
-    leftButton.disabled = true;
-  }
-});
+
 
 const toggleIcons = document.getElementById('toggle-icons');
   const navbar = document.getElementById('navbar');
@@ -44,7 +128,6 @@ const toggleIcons = document.getElementById('toggle-icons');
     if (event.target.classList.contains('fa-solid') || event.target.classList.contains('fa-regular')) {
       const clickedIndex = Array.from(toggleIcons.children).indexOf(event.target);
 
-      // Check for valid index within imagePaths array
       if (clickedIndex >= 0 && clickedIndex < imagePaths.length) {
         navbar.style.backgroundImage = `url(${imagePaths[clickedIndex]})`;
       } else {
