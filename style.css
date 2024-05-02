@@ -465,10 +465,14 @@ body {
     border-radius:50%;
      margin-right:-30px ;
      background-color: rgb(242, 246, 246);
-     opacity: 0.5;
+     opacity: 0.4;
+     top: 37%;
+     left:-1%;
      position:relative;
       background-size: cover; 
-    width: 20%;
+  }
+  #topImage > img {
+    opacity: 0.9;
   }
   
   
