@@ -85,6 +85,7 @@ body {
       justify-content:space-between;
       background-color: transparent; 
       color: #FFF !important;
+      font-weight: 500;
 }
 #navbar-links-url a {
     text-decoration:none;
@@ -96,7 +97,7 @@ body {
 
   
   #navbar-links-url a:hover {
-    color:orange; 
+    color:rgba(249,174,48,255); 
     text-decoration: underline; 
   }
   
@@ -115,12 +116,15 @@ body {
 
 
 }
+.active{
+    color: green !important;
+}
 
 #booking-contact{
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding-top: 15px;
+    padding-top: 40px;
 }
 #booking-contact p {
     /* line-height: 0.5; */
@@ -485,6 +489,10 @@ body {
   
   
   @media (max-width: 900px) {
+    #topImage{
+        left: -1%;
+        margin-left: 10px;
+    }
     #menu-button {
       display: block;  
     }
@@ -741,9 +749,3 @@ h3:hover {
     
 }
 
-@media (max-width: 768px) {
-    .top-bar {
-      flex-direction: column; 
-      align-items: flex-center; 
-    }
-}
