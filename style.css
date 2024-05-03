@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
       
 }
@@ -80,7 +80,7 @@ body {
     height: 400px;
     margin: 0 !important;
     box-shadow: none !important;
-    background-image:url('img/display101.jpg'); 
+    background-image:url('img/display105.jpg'); 
     background-size: cover;
 }
 #navbar-links{
@@ -109,7 +109,9 @@ body {
   
   #navbar-links-url a:hover {
     color:rgba(249,174,48,255); 
-    text-decoration: underline; 
+    padding-bottom: 1px;
+     border-bottom: 2px solid;
+
   }
   
 
@@ -482,7 +484,7 @@ body {
      background-color: rgb(242, 246, 246);
      opacity: 0.4;
      top: 37%;
-     left:-1%;
+     left:-15%;
      position:relative;
       background-size: cover; 
   }

@@ -133,7 +133,7 @@ const toggleIcons = document.getElementById('toggle-icons');
   const imagePaths = [
    'img/malindi2.png',
    'img/display104.jpg',
-   'img/display105.jpg' ,
+   'img/3days.jpeg',
    ' img/display102.jpg',
   ];
 
