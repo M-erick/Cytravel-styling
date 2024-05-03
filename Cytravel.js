@@ -4,7 +4,16 @@ const leftButton = document.querySelector('.chevron-left');
 const rightButton = document.querySelector('.chevron-right');
 const imageContainers = carousel.querySelectorAll('.image-with-text');
 
+const menuButton = document.getElementById("menu-button");
+const navbarLinksUrl = document.getElementById("navbar-links-url");
+const planTripButton = document.getElementById("planTripbutton");
+const siteIcons = document.getElementById("siteIcons");
 
+menuButton.addEventListener("click", function() {
+  navbarLinksUrl.classList.toggle("show");  
+  planTripButton.classList.toggle("hide");  
+  siteIcons.classList.toggle("hide");      
+});
 
 
 // data to carousel
@@ -131,7 +140,7 @@ const toggleIcons = document.getElementById('toggle-icons');
       if (clickedIndex >= 0 && clickedIndex < imagePaths.length) {
         navbar.style.backgroundImage = `url(${imagePaths[clickedIndex]})`;
       } else {
-        console.error("Invalid icon click index"); // Optional: Handle unexpected clicks
+        console.error("Invalid icon click index"); 
       }
     }
   });
@@ -140,7 +149,7 @@ const toggleIcons = document.getElementById('toggle-icons');
   
   const moveCarousel = (direction) => {
     const imageCount = imageCarousel.children.length;
-    const imageWidth = imageCarousel.children[0].offsetWidth; // Get width of first image
+    const imageWidth = imageCarousel.children[0].offsetWidth; 
   
     const newIndex = (currentImageIndex2 + imageCount + direction) % imageCount;
   

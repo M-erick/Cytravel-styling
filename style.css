@@ -141,7 +141,7 @@ body {
     padding-top: 30px;
     margin: 0 auto;
     justify-content: center;
-    position: relative; /* Make image container relative for button positioning */
+    position: relative; 
 
    
 }
@@ -156,10 +156,10 @@ body {
   .image-wrapper2 { 
     margin-top: 20px;
     margin-bottom: 20px;
-    background-size: cover;  /* Maintain image scaling */
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-end; /* Align content at the bottom */
+    background-size: cover;  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
     align-items: center;
 }
   
@@ -475,23 +475,52 @@ body {
     opacity: 0.9;
   }
   
+  #menu-button {
+    display: none;  
+  }
+  
+  #navbar-links-url.show {  
+    display: block;  
+  }
   
   
+  @media (max-width: 900px) {
+    #menu-button {
+      display: block;  
+    }
+    #navbar-links {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+    #navbar-links ul:first-child { 
+      order: 1;  
+    }
+    #planTripbutton{
+        display: none;
+    }
+    #siteIcons{
+        display: none;
+    }
+    #navbar-links ul:last-child {  
+      order: 2;  
+    }
+    #navbar-links-url.show {  
+      flex-direction: column;  
+    }
+    #planTripbutton.hide, #siteIcons.hide {  
+      display: none;
+    }
+}
 
 @media screen and(max-width:900px){
-    #navbar-links-url {
-        gap: 9px;
-    }
-    #displaytopImage{
-        margin-left: -10px; 
-      }
+    
+
+
+
     #topImage{
         margin-right: 0px;
     }
-    #navbar-links button{
-        padding: 20px 25px;
-        font-size: small;
-    }
+   
     #booking-contact{
         gap: 7px;
     }
@@ -506,7 +535,7 @@ body {
         line-height: 0;
     }
 }
-@media screen and (max-width: 900px) { /* Target screens smaller than 768px */
+@media screen and (max-width: 900px) { 
   
   .image-carousel{
     height: 100%;
@@ -714,7 +743,7 @@ h3:hover {
 
 @media (max-width: 768px) {
     .top-bar {
-      flex-direction: column; /* Stack items vertically in mobile view */
-      align-items: flex-center; /* Align items to the left in mobile view */
+      flex-direction: column; 
+      align-items: flex-center; 
     }
 }
