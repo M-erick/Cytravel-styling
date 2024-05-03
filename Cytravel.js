@@ -139,6 +139,12 @@ const toggleIcons = document.getElementById('toggle-icons');
 
       if (clickedIndex >= 0 && clickedIndex < imagePaths.length) {
         navbar.style.backgroundImage = `url(${imagePaths[clickedIndex]})`;
+
+        for (const icon of toggleIcons.children) {
+          icon.style.color = 'white';  
+        }
+  
+        event.target.style.color = 'rgba(249,174,48,255)';
       } else {
         console.error("Invalid icon click index"); 
       }
@@ -219,7 +225,15 @@ const toggleIcons = document.getElementById('toggle-icons');
     updateContent();
   }
   
-  toggleMessageDetails .addEventListener('click', toggleContent); 
+  toggleMessageDetails .addEventListener('click', (event)=>{
+    for (const icon of toggleMessageDetails.children) {
+      icon.style.color = 'white';  
+    }
+
+    event.target.style.color = 'rgba(249,174,48,255)';
+    toggleContent();
+
+  }); 
   chevronLeft.addEventListener('click',toggleContent);
   chevronRight.addEventListener('click',toggleContent);  
 
