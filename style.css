@@ -9,6 +9,17 @@ body {
       
 }
 
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+  }
+
 .menu a{
     color: black ;
     font-weight: light;
@@ -481,40 +492,74 @@ body {
   
   #menu-button {
     display: none;  
+    border: none;
+  background-color: inherit;
+  color: #fff;
   }
   
   #navbar-links-url.show {  
     display: block;  
   }
+  #mobile-navbar-links-url{
+    display: none;
+    list-style-type: none;
+    color: #FFF !important;
+    background-color: transparent;
+    
+  }
+  #mobile-navbar-links-url a{
+
+    text-decoration: none;
+    color: white;
+    padding-bottom: 2px;
+
+  }
+  #mobile-navbar-links-url a:hover{
+    color:rgba(249,174,48,255); 
+    text-decoration: underline; 
+  }
   
-  
+  .open {
+    display: block !important;
+  }
   @media (max-width: 900px) {
+    /* #mobile-navbar-links-url{
+        display: block;
+    } */
+   
+    #navbar-links{
+        display: none;
+    }
+
+   
     #topImage{
         left: -1%;
-        margin-left: 10px;
+        margin-left: 30px;
     }
     #menu-button {
       display: block;  
     }
-    #navbar-links {
+    #mobile-navbar-links-url{
+        
       flex-direction: column; 
       align-items: flex-start; 
+      order: 1;
     }
-    #navbar-links ul:first-child { 
-      order: 1;  
-    }
+   
+    
     #planTripbutton{
         display: none;
     }
     #siteIcons{
         display: none;
     }
-    #navbar-links ul:last-child {  
-      order: 2;  
+   
+    #mobile-navbar-links-url{
+        flex-direction: column;  
+
+
     }
-    #navbar-links-url.show {  
-      flex-direction: column;  
-    }
+    
     #planTripbutton.hide, #siteIcons.hide {  
       display: none;
     }

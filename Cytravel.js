@@ -5,14 +5,20 @@ const rightButton = document.querySelector('.chevron-right');
 const imageContainers = carousel.querySelectorAll('.image-with-text');
 
 const menuButton = document.getElementById("menu-button");
-const navbarLinksUrl = document.getElementById("navbar-links-url");
+const navbarLinksUrl = document.getElementById("mobile-navbar-links-url");
 const planTripButton = document.getElementById("planTripbutton");
 const siteIcons = document.getElementById("siteIcons");
+const backdrop = document.querySelector(".backdrop");
 
+
+//setting up the hamburger option
+backdrop.addEventListener("click", function() {
+  navbarLinksUrl.classList.remove("open");
+  backdrop.classList.remove("open");
+});
 menuButton.addEventListener("click", function() {
-  navbarLinksUrl.classList.toggle("show");  
-  planTripButton.classList.toggle("hide");  
-  siteIcons.classList.toggle("hide");      
+  navbarLinksUrl.classList.add("open"); 
+  backdrop.classList.add("open"); 
 });
 
 
