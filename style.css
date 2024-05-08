@@ -43,6 +43,8 @@ body {
     padding: 12px 15px;
     border-radius: 23px;
     background-color: transparent;
+    margin-left: 8px;
+
 }
 #toggle-icons {
     display: flex;
@@ -107,13 +109,18 @@ body {
 }
 
   
-  #navbar-links-url a:hover {
+  /* #navbar-links-url a:hover {
     color:rgba(249,174,48,255); 
     padding-bottom: 1px;
      border-bottom: 2px solid;
 
   }
-  
+   */
+.book-hover button:hover{
+  background-color: rgba(249,174,48,255);
+  color: white !important;
+
+}
 
 
 #navbar-links ul {
@@ -182,11 +189,9 @@ body {
   
 
   
-  .chevron-left2,
   .chevron-right2 {
     position: absolute; 
-    background-color: rgb(230, 219, 219);
-    opacity: 0.9;
+    background-color: rgb(255, 255, 255,0.30);
     border-radius: 50%;
     padding: 13px 15px;
     top: 50%; 
@@ -197,6 +202,20 @@ body {
   .chevron-left2 {
     left: 0; 
     margin-left: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255,0.30);
+    top: 50%; 
+    z-index: 1; 
+    transform: translateY(-50%); 
+    padding: 13px 15px;
+
+
+
+
+
+
+
   }
   
   .chevron-right2 {
@@ -245,12 +264,13 @@ body {
   .rotate-arrow {
     transform: rotate(320deg); 
     display: inline-block; 
-    background-color: rgb(230, 219, 219);
-    opacity: 0.9;
+    background-color: rgb(230, 219, 219,0.45);
+    /* opacity: 0.9; */
     border-radius: 50%;
     padding:5px 10px;
     
     text-align: center;
+    align-items: center;
     width: fit-content;
     height: fit-content;
     box-sizing: border-box;
@@ -258,10 +278,10 @@ body {
   
   #testimonial-outer-card {
     margin-top:35px;
-    border:1px solid rgba(87,81,80,255) ;
-    background-color:rgba(87,81,80,255); 
-    opacity: 0.85;
-    border-radius: 90px;
+    border:1px solid rgb(140, 138, 139) ;
+    background-color:rgb(140, 138, 139,0.80); 
+    /* opacity: 0.85; */
+    border-radius: 85px;
      position: relative;
      display: flex;
      align-items: center; 
@@ -274,13 +294,13 @@ body {
     display:flex;
     justify-content:space-between ;
     gap: 5px;
-     border:1px solid rgba(101,95,96,255); 
-     background-color:rgba(101,95,96,255);
+     border:1px solid rgb(140, 138, 139); 
+     background-color:rgb(140, 138, 139,0.80);
      opacity: 0.9;
      border-radius: 55px;
      position: relative;
       width: 550px;
-      margin-top: -2px; 
+      margin-top: -3px; 
        overflow: visible;
        padding-top: 20px;
        padding-left: 20px; 
@@ -481,12 +501,13 @@ body {
   #topImage{
     border-radius:50%;
      margin-right:-30px ;
-     background-color: rgb(242, 246, 246);
-     opacity: 0.4;
+     background-color: rgb(255, 255, 255,0.11);
+     /* opacity: 0.4; */
      top: 37%;
      left:-15%;
      position:relative;
       background-size: cover; 
+      backdrop-filter:blur(5.5px);
   }
   #topImage > img {
     opacity: 0.9;
@@ -551,6 +572,7 @@ body {
     
     #planTripbutton{
         display: none;
+        padding-top: 30px;
     }
     #siteIcons{
         display: none;
@@ -666,7 +688,6 @@ body {
     text-align: center;
     margin-top: 20px; 
     margin-bottom: 20px;
-    margin-right: 30px;
 }
 .work-info {
     text-align: left;
