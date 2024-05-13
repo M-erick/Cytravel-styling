@@ -156,17 +156,39 @@ const toggleIcons = document.getElementById('toggle-icons');
       }
     }
   });
+
   const imageCarousel = document.querySelector('.image-carousel2');
-  const currentImageIndex2 = 0; // Keeps track of the currently displayed image
+  const imageDivs = document.querySelectorAll('.image-carousel2 >.image-wrapper2');
+  const imageCount = imageDivs.length
+  const imageWidth = imageDivs[0].offsetWidth;
+
+  let transformValue = -(imageWidth/2);
+  imageCarousel.style.transform = `translateX(${transformValue}px)`;
+  
+  let currentImageLeftIndex2 = 1;
+  let currentImageRightIndex2 = imageCount - 1;
   
   const moveCarousel = (direction) => {
-    const imageCount = imageCarousel.children.length;
-    const imageWidth = imageCarousel.children[0].offsetWidth; 
-  
-    const newIndex = (currentImageIndex2 + imageCount + direction) % imageCount;
-  
-    imageCarousel.style.transform = `translateX(-${newIndex * imageWidth}px)`;
-    currentImageIndex2 = newIndex;
+    if (direction === -1) {
+
+        if (currentImageLeftIndex2 > 0) {
+          currentImageLeftIndex2--;
+          currentImageRightIndex2--;
+          transformValue += imageWidth / 2
+          imageCarousel.style.transform = `translateX(${transformValue}px)`;
+        }
+
+    } else {
+
+      if (currentImageRightIndex2 < imageCount) {
+        currentImageLeftIndex2++;
+        currentImageRightIndex2++;
+        transformValue -= imageWidth / 2
+        imageCarousel.style.transform = `translateX(${transformValue}px)`;
+      }
+
+    }
+
   };
   
   const leftButton2 = document.querySelector('.chevron-left2');
